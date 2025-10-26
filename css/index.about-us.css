@@ -1,0 +1,159 @@
+/* Oleksii Melnychuk */
+
+.about-us__main {
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+
+  @media (max-width: 860px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .about-us__image {
+    position: relative;
+    width: 100%;
+  }
+}
+.about-us__image,
+.about-us__body {
+  flex: 1;
+}
+
+.rotate-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background:var(--bg-color-light);
+  border: 2px solid var(--error-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 2px 4px var(--bg--color--form);
+}
+
+.rotate-btn:active {
+    background:var(--accent-color);
+    transition:background-color 0.1s;
+    transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.rotate-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--error-color);
+    transition: ease-in-out 2.3s;
+}
+
+.rotate-btn:active svg {
+    transition:ease-in-out 2.3s;
+    fill: var(--accent-color-hover);
+}
+
+#aboutUsImage {
+  transition:var(--transition-duration);
+  max-width: 100%;
+  height: auto;
+  transform-origin: center center;
+  display: block;
+}
+
+#aboutUsImage.rotated {
+  transform: rotate(360deg);
+  transition-duration: 1.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.about-us__title {
+  color: var(--cta-color);
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 12px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  will-change: color;
+}
+
+.about-us__subtitle {
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: clamp(34px, 5vw, 42px);
+  margin-bottom: 20px;
+  display: block;
+  color: var(--text-color-dark);
+}
+
+.about-us__description,
+.about-us__text {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: var(--text-color-dark);
+}
+
+.about-us__text {
+  color: var(--text-color-light);
+}
+
+.about-us__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px 8px;
+  margin-bottom: 20px;
+  list-style: none;
+  align-items: center;
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px 3px;
+  }
+
+  @media (min-width: 480px) and (max-width: 1150px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+  }
+}
+
+.about-us__item {
+  align-items: center;
+  font-size: 16px;
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+  will-change: transform;
+}
+
+.about-us__item::before {
+    content: url("../img/about-us/round-tick.svg");
+    margin-right: 4px;
+}
+
+.about-us__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  padding: 12px 24px;
+  background-color: var(--cta-color);
+  color: var(--text-color-on-dark-bg);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color var(--transition-duration);
+  box-shadow: 0 4px 8px var(--bg--color--form);
+  will-change: background-color;
+}
+
+.about-us__button:hover {
+  background-color: var(--cta-color-hover);
+}
+
+.button__icon {
+  transform: translate(-3px, -3px);
+}

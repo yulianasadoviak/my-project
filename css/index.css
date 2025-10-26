@@ -1,0 +1,17 @@
+@import "global.css";
+@import "global.header-nav.css";
+@import "index.header-hero.css";
+@import "index.about-us.css";
+@import "index.how-it-works.css";
+@import "index.weekly-sales.css";
+@import "index.fresh-deals.css";
+@import "index.why-choose-us.css";
+@import "index.top-picks.css";
+@import "index.our-app.css";
+@import "index.partners.css";
+@import "index.organic.css";
+@import "index.testimonials.partial.css";
+@import "index.need-help.css";
+@import "global.footer.css";
+@import "cart-modal.css";
+@import "alert.css";

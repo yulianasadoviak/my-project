@@ -1,0 +1,148 @@
+.top-picks {
+  margin-top: 6rem;
+
+  .top-picks__header-container {
+    max-width: 600px;
+    margin: auto;
+
+    .top-picks__header {
+      color: var(--cta-color);
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .top-picks__deals,
+    .top-picks__header,
+    .top-picks__description {
+      display: flex;
+      justify-content: center;
+    }
+
+    .top-picks__deals {
+      color: var(--text-color-dark);
+      font-weight: bold;
+      font-size: 2rem;
+      margin: 1rem;
+      @media (min-width: 600px) {
+        font-size: 3rem;
+      }
+    }
+
+    .top-picks__description {
+      color: var(--text-color-light);
+      font-size: 1.15rem;
+      flex-wrap: wrap;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+  }
+  .top-picks__card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.75rem;
+    margin: 3rem auto;
+    max-width: 1260px;
+    width: 100%;
+    position: relative;
+    padding-inline: 1rem;
+
+    .top-picks__left-btn,
+    .top-picks__right-btn {
+      background-color: var(--text-color-on-dark-bg);
+      color: var(--text-color-light);
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s, color 0.3s;
+
+      @media (max-width: 1023px) {
+        background-color: var(--text-color-on-dark-bg);
+        color: var(--text-color-light);
+      }
+
+      .top-picks__icon {
+        width: 48px;
+        height: 48px;
+      }
+    }
+
+    .top-picks__wheel {
+      display: flex;
+      gap: 1.75rem;
+      flex-wrap: nowrap;
+      overflow: hidden;
+      width: 100%;
+      padding: 0;
+
+      .top-picks__card {
+        background-color: var(--bg-color-light);
+        padding: 1.75rem;
+        height: 430px;
+        flex: 0 0 auto;
+        text-align: center;
+        width: calc((100% - 3 * 1.75rem) / 4);
+
+        @media (min-width: 640px) and (max-width: 1023px) {
+          width: calc((100% - 1 * 1.75rem) / 2);
+        }
+
+        @media (max-width: 639px) {
+          width: 100%;
+        }
+
+        h3,
+        p {
+          text-align: center;
+        }
+
+        h3 {
+          font-size: 1rem;
+          font-weight: 600;
+          color: var(--text-color-dark);
+          margin-top: 2rem;
+        }
+
+        .top-picks__price {
+          color: var(--accent-color);
+          font-weight: bold;
+        }
+
+        button {
+          display: block;
+          margin: 1.5rem auto 0;
+          color: var(--cta-color);
+          background-color: var(--bg-color-light);
+          border: 2px solid var(--accent-color);
+          height: 3rem;
+          width: 6rem;
+          border-radius: 5px;
+          font-size: 0.75rem;
+          font-weight: bold;
+          box-shadow: none;
+          outline: none;
+          &:hover {
+            color: var(--text-color-on-dark-bg);
+            background-color: var(--accent-color);
+            box-shadow: none;
+            border: 1px solid var(--accent-color);
+          }
+        }
+
+        img {
+          display: block;
+          margin: 0 auto;
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}

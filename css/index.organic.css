@@ -1,0 +1,133 @@
+.organic h2 {
+  text-align: center;
+  color: var(--orange-primary);
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.organic__title {
+  text-align: center;
+  color: var(--text-color-darkest);
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.organic__subtitle {
+  font-size: 18px;
+  color: var(--text-color-medium);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.organic__products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px;
+  margin: 0 auto;
+  justify-items: center;
+  margin-top: 30px;
+  max-width: 1120px;
+}
+
+@media (max-width: 1024px) {
+  .organic__products {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+@media (max-width: 768px) {
+  .organic__products {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 480px) {
+  .organic__products {
+    grid-template-columns: 1fr; 
+  }
+}
+
+
+.organic__product {
+  background-color: var(--bg-color-light);
+  border-radius: 0;
+  box-shadow: none;
+  text-align: center;
+  padding: 20px;
+  width: 257.5px;
+  height: 432.17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.organic__product img {
+  width: 197.5px;
+  height: 197.5px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.organic__product-name {
+  font-size: 20px;
+  color: var(--text-color-darkest);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.organic__product-price {
+  font-size: 18px;
+  color: var(--accent-color);
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color-light);
+  width: 100%;
+  height: 35px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.organic__product-buy-button {
+  width: 93.06px;
+  height: 42.8px;
+  padding: 0;
+  background-color: transparent;
+  color: var(--orange-primary);
+  border: 2px solid var(--accent-color);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.organic__product-buy-button:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.organic__product-link {
+  display: block;
+  width: 197.5px;
+  height: 197.5px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.organic__product-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.organic__product:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}

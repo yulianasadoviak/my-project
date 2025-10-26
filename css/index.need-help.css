@@ -1,0 +1,83 @@
+.contact-info{
+  color: var(--text-color-dark);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 60px auto;
+  padding: 0 40px;
+  font-family: "Istok Web", sans-serif;
+}
+
+.contact-info__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 277px;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  padding: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact-info__card--help {
+  background-image: url("../img/need-help/avocados-and-other.png");
+}
+
+.contact-info__card--hours {
+  background-image: url("../img/need-help/vegetables.png");
+}
+
+.contact-info__label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--cta-color);
+  margin-bottom: 20px;
+  margin-top: 45px;
+}
+
+.contact-info__var {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.5rem 0 0.25rem;
+}
+
+.contact-info__time {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--cta-color);
+  margin: 0;
+}
+
+.contact-info__phone,
+.contact-info__email {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .contact-info {
+    flex-direction: row;
+    gap: 30px;
+  }
+  .contact-info__card {
+    flex: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact-info {
+    gap: 40px;
+  }
+  .contact-info__card {
+    padding: 40px;
+  }
+  .contact-info__label {
+    margin-bottom: 2rem;
+  }
+}

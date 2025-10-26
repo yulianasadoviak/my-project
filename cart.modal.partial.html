@@ -1,0 +1,55 @@
+<!-- Cart Modal -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content cart-modal">
+      <header class="modal-header cart-modal__header">
+        <h2 class="modal-title cart-modal__title" id="cartModalLabel">Shopping cart</h2>
+        <button type="button" class="btn-close cart-modal__close-btn" data-bs-dismiss="modal" aria-label="Close">✖️</button>
+      </header>
+
+      <div class="modal-body">
+        <!-- Products List -->
+        <section class="cart-modal__products">
+          <h3 class="cart-modal__subtitle">Products</h3>
+
+          <!-- Products will be dynamically added here -->
+        </section>
+        <section class="cart-modal__total">
+          <a href="#" class="cart-modal__promo-link">Promo code</a>
+          <p class="cart-modal__total">Total: <strong>5.00 USD</strong></p>
+        </section>
+
+        <!-- Order Form -->
+        <form 
+          class="cart-modal__form mt-3"
+          hx-post="/submit-cart"
+          hx-swap="none"
+          hx-on="htmx:afterRequest: closeCartModal()"
+        >
+          <h3 class="cart-modal__subtitle">Place an order</h3>
+          <label class="cart-modal__label" for="cart-name">
+            Name <span class="cart-modal__required">*</span>
+          </label>
+          <input type="text" id="cart-name" name="name" placeholder="Your name" required class="cart-modal__input" />
+          <label class="cart-modal__label" for="cart-email">
+            Email <span class="cart-modal__required">*</span>
+          </label>
+          <input type="email" id="cart-email" name="email" placeholder="Your email address" required class="cart-modal__input" />
+          <label class="cart-modal__label" for="cart-phone">
+            Phone <span class="cart-modal__required">*</span>
+          </label>
+          <input type="tel" id="cart-phone" name="phone" placeholder="Your phone" required class="cart-modal__input" />
+          <label class="cart-modal__label" for="cart-comment">Comment</label>
+          <textarea id="cart-comment" name="comment" placeholder="Your comment" class="cart-modal__textarea" rows="4"></textarea>
+          <button type="submit" class="btn btn-primary cart-modal__submit-btn w-100 mt-2">
+            Order
+          </button>
+        </form>
+      </div>
+
+      <footer class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continue Shopping</button>
+      </footer>
+    </div>
+  </div>
+</div>

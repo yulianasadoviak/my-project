@@ -1,0 +1,54 @@
+.weekly-sales {
+  /*contains 2 items with ads*/
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 60px auto;
+  min-height: 277px;
+  font-family: "Istok Web";
+  @media (min-width: 768px) {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .weekly-sales-card {
+    /*contains 3 text elements inside*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    min-height: 277px;
+    flex: 1;
+    padding: 25px;
+    background-position: center;
+    background-size: cover;
+    color: var(--text-color-on-dark-bg);
+  }
+  .weekly-sales-card--green {
+    background-image: url("../img/weekly-sales/fresh-green-foods.png");
+  }
+
+  .weekly-sales-card--orange {
+    background-image: url("../img/weekly-sales/fresh-yellow-foods.png");
+  }
+
+  .weekly-sales-card__offer-type {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+  .weekly-sales-card__badge {
+    font-size: 2.5rem;
+  }
+
+  .weekly-sales-card__link {
+    display: inline;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--text-color-on-dark-bg);
+  }
+
+  .weekly-sales-card__link svg {
+    vertical-align: middle;
+  }
+}

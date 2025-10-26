@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Market Website - Product Info</title>
+    <link
+      rel="shortcut icon"
+      href="./img/favicon/favicon.png"
+      type="image/x-icon"
+      sizes="16x16"
+    />
+    <script
+      src="https://unpkg.com/htmx.org@1.9.10"
+      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/product-info.css" />
+  </head>
+  <body>
+    <header class="header">
+      <!-- Ira Mazurak -->
+      <nav
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="global.header-nav.partial.html"
+      ></nav>
+    </header>
+    <nav class="product-card__home-navigation container">
+      <a href="index.html" class="product-card__back-link">Store homepage</a>
+    </nav>
+    <main class="product-card container">
+      <section class="product-card__gallery">
+        <div class="product-card__main-gallery">
+          <button
+            class="product-card__nav-button product-card__nav-button--prev"
+          >
+            <svg
+              width="14"
+              height="26"
+              viewBox="0 0 14 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.5 2L1.5 13L12.5 24"
+                stroke="#464C5C"
+                stroke-width="2"
+                stroke-miterlimit="10"
+                stroke-linecap="square"
+              ></path>
+            </svg>
+          </button>
+
+          <img
+            src="./img/products/bell-pepper.png"
+            alt="Bell pepper pack"
+            class="product-card__main-image"
+          />
+
+          <button
+            class="product-card__nav-button product-card__nav-button--next"
+          >
+            <svg
+              width="14"
+              height="26"
+              viewBox="0 0 14 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.5 24L12.5 13L1.5 2"
+                stroke="#464C5C"
+                stroke-width="2"
+                stroke-miterlimit="10"
+                stroke-linecap="square"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <ul class="product-card__thumbnails-gallery">
+          <li class="product-card__thumbnail-item">
+            <img
+              src="img/products/bell-pepper.png"
+              alt="Bell pepper pack"
+              class="product-card__thumbnail-image"
+            />
+          </li>
+        </ul>
+      </section>
+
+      <section class="product-card__details">
+        <div class="product-card__basic-info">
+          <p class="product-card__availability">In Stock</p>
+          <h1 class="product-card__title">Bell Pepper (0005)</h1>
+          <p class="product-card__sku">Product Code 23</p>
+          <p class="product-card__price">8,00 USD</p>
+        </div>
+        <hr class="product-card__divider" />
+        <div class="product-card__ordering">
+          <div class="quantity-control">
+            <input
+              type="number"
+              class="quantity-control__input"
+              value="1"
+              min="1"
+            />
+            <div class="quantity-control__buttons">
+              <button
+                type="button"
+                class="quantity-control__button quantity-control__button--increase"
+              >
+                <svg width="10" height="6" fill="none">
+                  <path
+                    d="M5.35.156a.474.474 0 00-.701 0L.111 5.264a.437.437 0 00-.111.29C0 5.8.207 6 .462 6h9.076c.11 0 .217-.038.3-.107a.435.435 0 00.05-.629L5.352.156z"
+                    fill="#9199AB"
+                  ></path>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="quantity-control__button quantity-control__button--decrease"
+              >
+                <svg width="10" height="6" fill="none">
+                  <path
+                    d="M5.35.156a.474.474 0 00-.701 0L.111 5.264a.437.437 0 00-.111.29C0 5.8.207 6 .462 6h9.076c.11 0 .217-.038.3-.107a.435.435 0 00.05-.629L5.352.156z"
+                    fill="#9199AB"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <button type="button" class="product-card__buy-button">
+            Add to cart
+          </button>
+        </div>
+
+        <div class="product-card__description">
+          <h2 class="product-card__description-title">Description</h2>
+          <hr class="product-card__divider" />
+          <p class="product-card__description-text">
+            It is an organic rainbow bell pepper pack that provides you with
+            lots of vitamins, juicy meat, and sweet taste. The price is for 1
+            pack (4 bell pepper in each).
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="global.footer.partial.html"
+    ></footer>
+	<script src="js/product-info.js"></script>
+  </body>
+</html>
